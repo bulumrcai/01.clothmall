@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: #ff0000;
+            width: 500px;
+            height: 200px;
+        }
+        .inner {
+            background-color: #00ff00;
+            height: 30px;
+        }
+        .p {
+            background-color: #0000ff;
+        }
+        .span {
+            background-color: #ff0000;
+        }
+        .strong {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. block（浏览器默认给div/p/h1...元素的display设置了block
+        2. inline（将block元素转回到行内元素
+        3. inline-block 
+             #可以和其他元素在同一行显示
+             #可以设置宽度和高度
+     -->
+    <!-- 
+        块级元素的特点：独占父元素的一行
+        行内级元素的特点：和其他行内级元素可以在同一行显示
+     -->
+     <!-- 块级元素 -->
+     <div class="box">
+        <div class="inner"></div>
+        <p class="p">我是段落</p>
+    </div>
+    <!-- 在下一行展示 -->
+    <!-- 行内级元素 -->
+    <span class="span">我是span元素</span>
+    <strong class="strong">我是strong元素</strong>
+    <img src="../img/entity.JPG" alt="" width="200px" height="200px">
+    <input type="text">
+</body> 
+</html>

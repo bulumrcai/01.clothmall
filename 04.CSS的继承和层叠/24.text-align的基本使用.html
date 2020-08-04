@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .span1 {
+            text-align: center;
+        }
+
+        .img1 {
+            text-align: center;
+        }
+        .p1 {
+            text-align: center;
+        }
+        .div1 {
+            text-align: center;
+        }
+        .p2 {
+            background-color: #ff0000;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 没有嵌套关系的元素由于元素种类而造成居中显示的结果 -->
+    <h2>没有嵌套关系的行内级元素</h2>
+    <span class="span1">我是span</span>
+    <h2>没有嵌套关系的行内级元素img</h2>
+    <img src="../img/jd_img/1.webp" alt="" class="img1">
+    <h2>没有嵌套关系的块级元素</h2>
+    <p class="p1">我是p</p>
+    <h2>有嵌套关系且父元素为块级元素,子元素为行内级元素</h2>
+    <!-- 给父元素赋予text-align: center实现子行内级元素的水平居中 -->
+    <div class="div1">
+        <span>我是span</span>
+    </div>
+    <div class="div1">
+        <img src="../img/jd_img/1.webp" alt="" class="img1">
+    </div>
+    <h2>有嵌套关系且父元素为块级元素,子元素为块级元素且宽为auto</h2>
+    <div class="div1">
+        <p>我是p</p>
+    </div>
+    <h2>有嵌套关系且父元素为块级元素,子元素为块级元素且宽为200px</h2>
+    <div class="div1">
+        <p class="p2">我是p</p>
+    </div>
+</body>
+</html>

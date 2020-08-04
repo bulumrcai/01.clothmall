@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            box-sizing: content-box;
+            width: 1100px;
+            height: 100px;
+            padding-bottom: 20px;
+            background-color: #0000ff;
+            border-bottom: 10px solid #00ff00;
+        }
+        span {
+            background-color: #ff0000;
+        }
+        .box2 {
+            box-sizing: border-box;
+            width: 1100px;
+            height: 100px;
+            padding-bottom: 20px;
+            background-color: #0000ff;
+            border-bottom: 10px solid #00ff00;
+        }
+        span {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <h2>content-box</h2>
+    <!-- 设置宽高的时候只包括内容 -->
+    <div class="box1"></div>
+    <span>span</span>
+    <h2>border-box</h2>
+    <div class="box2"></div>
+    <span>span</span>
+</body>
+</html>

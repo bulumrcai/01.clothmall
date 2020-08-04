@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 800px;
+            background-color: #ff0000;
+            position: relative;
+        }
+
+        .inner1 {
+            width: 200px;
+            height: 200px;
+            background-color: #00ff00;
+            padding: 50px;
+            border: 50px solid #0000ff;
+            transform: translate(50%);
+        }
+        .inner2 {
+            width: 200px;
+            height: 200px;
+            background-color: #00ff00;
+            padding: 50px;
+            border: 50px solid #0000ff;
+            position: absolute;
+            left: 200px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>inner1 用translate inner用absolute进行定位 200px</h2>
+    <div class="container">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

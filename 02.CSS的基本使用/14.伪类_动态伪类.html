@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 未访问状态 */
+        a:link {
+            color: red;
+        }
+        /* 已经访问过 */
+        a:visited{
+            color: green;
+        }
+        /* 鼠标放上去 */
+        a:hover {
+            color: blue;
+        }
+        /* 鼠标按下去未松手 */
+        a:active {
+            color: pink;
+        }
+
+        /* :hover :active 在其他元素的使用 */
+        h2:hover {
+            color: red;
+        }
+        h2:active {
+            color: blue;
+        }
+        /* :focus的使用 */
+        input:focus {
+            background-color: #ff0000;
+        }
+        /* 去除a元素的聚焦状态,但是还是可以选中 */
+        a:focus {
+            outline: none;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="#">百度一下</a>
+    <div>
+        <h2>Hello World</h2>
+    </div>
+    <div>
+        输入: <input type="text">
+    </div>
+    <!-- 去除选中的状态 -->
+    <a href="#" tabindex="-1">你好</a>
+</body>
+</html>

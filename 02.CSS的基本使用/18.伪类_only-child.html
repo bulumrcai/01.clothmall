@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :only-child {
+            color: red;
+        } */
+        /* 由于html是唯一的,所以所有文字都会变成红色 */
+        span:only-child {
+            color: red;
+        }
+         /* 1 变成红色,4 不是唯一的子元素,所以不变色 */
+    </style>
+<body>
+    <div>
+        <p>
+            <span>文字内容1</span>
+        </p>
+        <p>
+            文字内容2
+        </p>
+    </div>
+    <div>
+        <strong>文字内容3</strong>
+        <a href="#">
+            <span>文字内容4</span>
+            <span>hello_world</span>
+        </a>
+    </div>
+</body>
+</html>

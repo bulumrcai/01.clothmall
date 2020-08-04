@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #ff0000;
+        }
+        a {
+            position: fixed;
+            right: 0px;
+            top: 0px;
+        }
+        /* 
+        position： fixed
+        1.脱离了标准流布局，不占据空间
+        2. 定位后，脱离了标准流，但仍然占据这标准流时的空间
+         */
+    </style>
+</head>
+<body>
+    <h2>position: relative的演练</h2>
+    <span>span元素</span>
+    <strong>strong元素</strong>
+    <img src="../img/jdg_footer.png" alt="" >
+    <div>div元素</div>
+    <a href="#">a元素</a>
+    <!-- a元素在右上方，且i占据了a元素原来的空间，脱离标准流 -->
+    <i>i元素</i>
+</body>
+</html>

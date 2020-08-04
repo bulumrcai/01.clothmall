@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* 广告相关的样式 */
+#header .ad {
+    overflow: hidden;
+}
+/* a为什么不能overflow:hidden */
+/* auto => 浏览器
+块级元素width默认是父元素的宽度即body的宽度
+行内级元素,内容多少就是多少,所以并没有overflow */
+
+/* 图片水平居中 position: relative*/
+#header .ad img{
+    /* 元素未脱离标准流 */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* #header .ad {
+    overflow: hidden;
+    position: relative;
+}
+
+#header .ad img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+} */
+/* 为什么用这种方法会无法显示? 为什么赋值给父元素position: relative;就无法显示? */
+/* 因为absolute使得img脱离了标准流使得父元素div认为其内部没有内容,height自然为0,所以无法显示 */
+/* absolute一般用于高和宽确定的父元素 */
+/* 合并属性 */
+#header .nav a {
+    color: #999;
+    padding: 0 15px 0 15px;
+    /* display: inline-block; */
+    /* 浮动后就变成块 */
+    /* 能浮动就浮动，避免中间产生间隙 */
+    line-height: 30px;
+    /* height: 30px; */
+    float: left;
+
+}
+
+#header .nav a:hover {
+    color: #ffffff;
+}
+/* 导航相关的样式 */
+#header .nav {
+    height: 30px;
+    background-color: #000;
+    line-height: 30px;
+}
+/* 有左右浮动的处理：一般分成左右两块。将对应父元素，子元素分别进行浮动处理  */
+/* 导航左侧相关 */
+#header .nav .left-nav, #header .nav .welcome ,#header .nav .account{
+    float: left;
+}
+
+#header .nav .welcome {
+    padding: 0 15px 0 15px;
+}
+/* 
+#header .nav .account a:hover {
+    color: #ffffff;
+} */
+
+/* 导航右侧相关 */
+/* 设置浮动时，html中位于前面的元素先产生浮动，与CSS的设置顺序无关 */
+#header .nav .right-nav, 
+#header .nav .right-nav .group1,
+#header .nav .right-nav .group2 {
+    float: right;
+}
+/* #header .nav .right-nav a {
+    color: #999;
+} */
+
+/* #header .nav .right-nav a:hover {
+    color: #fff;
+}  */
+
+/* #header .nav .right-nav a{
+    margin-left: 30px;
+} */
+
+/* 可以和上面合并属性 */
+
+/* 发现所有的a只有点击内容才有变色 */
+/* 由于浮动的是div，a并没有变成块级元素 */
+/* #header .nav a{
+    line-height: 30px; */
+    /* height: 30px; */
+    /* display: inline-block;
+} */
+/* 合并 */
+/* 观察到对应的样式并没有间隙，所以不是margin，而是使用了padding */
+#header .nav .right-nav .group2 a {
+    margin: 0;
+    /* padding: 0 16px 0 12px; */
+    padding: 0 12px;
+    /* background-color: #fff; */
+}
+/* 发现a变成inline-block之后即使margin: 0，中间仍然有空隙 */
+/* 空隙产生的原因:a与a之间换行符导致的间隙，由此知前面都有间隙
+利用浮动来解决，可以让全部a都做浮动 */
+#header .nav .right-nav .group2 a:hover {
+    background-color: #fff;
+    color: #ff1e32;
+}
+/* 间隔可以用margin或padding来实现，要注意做好选择 */
+/* 法1：使用i来做小图标 */
+/* 法2：做小图标，想到了利用伪元素::after来实现小箭头 */
+/* a处不处于hover都可以加上小箭头 */
+/* 伪元素会算在宽度定位，所以需要用绝对定位或者浮动来使其脱离标准流 */
+/* 但伪元素不支持旋转 */
+/* i是行内及元素 */
+#header .nav .right-nav .group2 i{
+    display: inline-block;
+    width: 0;
+    height: 0;  
+    border: 4px solid #999;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    transform-origin: center 2px;
+    /* 设置旋转的中心应该在旋转触发之前设置 */
+    /* 需要过渡动画 */
+    transition: transform .3s ease-in;
+}
+
+#header .nav .right-nav .group2 a:hover i{
+    transform: rotate(180deg);
+    /* 当transform后面的transform被调用时，会自动调用transition */
+    border-top-color: #ff1e32;
+}
+/* 对图标进行定位，微调使用relative或者transform都行 */
+/* 若后面要用transform则虽好采用relative */
+/* 由于加上了新图标且图标使用了relative，代表图标仍会在标准流中占据空间4px，因此padding需要相同 */
+
+/* logo search cart */
+#header .operation {
+    height: 300px;
+    background-color: #ff0000;
+    /* line-height: 300px;
+    font-size: 0; */
+    /* 看起来居中，因为之前有vertical-align所以还要设置font-size: 0但会影响其他布局 */
+}
+
+#header .operation img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}

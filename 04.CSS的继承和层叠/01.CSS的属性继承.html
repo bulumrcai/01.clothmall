@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            color: red;
+            font-size: 20px;
+            font-weight: 400;
+            background-color: #00ff00;
+
+            width: 400px;
+        }
+        /* p继承了div的前景颜色 */
+        /* strong没有继承font-weight，因为本身有设置font-weight */
+
+        img {
+            /* width: 100%;  */
+            width: inherit;
+        }
+        /* 百分比是相对于包含块（即谁包含了该元素） */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>hahahaha</p>
+        <div>
+            <strong>hehehehe</strong>
+        </div>
+
+        <img src="../img/entity.JPG" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 布局样式 */
+        .today {
+            width: 1100px;
+            height: 400px;
+            background-color: #ff0000;
+        }
+        .today ul {
+            /* margin-right: -6px; */
+            margin-right: -3px;
+            /* 第一步：解决增加的border，使得容器可以容纳*/
+            /* 第三步：再次调节容器的大小，边框重叠后，由于三个都有1px不计算在内*/
+        }
+        .today ul li {
+            float: left;
+            width: 420px;
+            height: 190px;
+            background-color: #00ff00;
+            border: 1px solid #333;
+            margin-right: -1px;
+            /* 第二步：解决重叠的边框 */
+            margin-top: -1px;
+            /* 第四步：解决top的边框 */
+            /* 垂直方向多出了一个像素 */
+        }
+        .today ul li.first {
+            width: 260px;
+            height: 381px;
+            /* 第五步：top增加1*/
+            background-color: #0000ff;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="today">
+        <ul>
+            <li class="first"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

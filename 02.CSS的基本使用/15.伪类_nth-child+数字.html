@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :nth-child(3) {
+            color: red;
+        }
+        /* 3和11会变成红色,原因是:nth-child()会被子元素所继承
+        (11: body的第三个孩子, 3: div的第三个孩子(继承了body)) */
+        
+        /* (1)子元素为p (2)第五个子元素 之一是子元素 */
+        p:nth-child(5) {
+            color: yellow;
+        }
+        /* 区分
+        p :nth-child(5)  p后代的第5个孩子*/
+    </style>
+</head>
+<body>
+    <div>
+        <p>文字内容1(p)</p>
+        <p>文字内容2(p)</p>
+        <p>文字内容3(p)</p>
+        <div>文字内容4(div)</div>
+        <p>文字内容5(p)</p>
+        <p>文字内容6(p)</p>
+        <p>文字内容7(p)</p>
+        <p>文字内容8(p)</p>
+        <p>文字内容9(p)</p>
+    </div>
+
+    <div>这是内容10(div)</div>
+    <div>这是内容11(div)</div>
+    <div>这是内容12(div)</div>
+    <div>这是内容13(div)</div>
+    <div>这是内容14(div)</div>
+</body>
+</html>

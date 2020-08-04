@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 830px;
+            height: 620px;
+            background-color: #ff0000;
+            margin: 0 auto;
+        }
+        .warp {
+            margin-right: -10px;
+            /* margin: 0 -5px */
+        }
+        .session {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #00ff00;
+        }
+        
+        /* 四个元素时，中间只有三个间隔，会导致最后一个元素的margin-right是多余的 */
+        /* 
+        2. 使用当宽度为auto时(即默认情况下）的公式
+            当contained block的宽度为auto时：
+            width of contained block = margin-left + border-left + padding-left + content-width + 
+            padding-right + border-right + margin-right
+            在默认（自己赋值）的情况下：border: 0, padding: 0
+            所有有：width of contained block = margin-left + content-width(auto) + margin-right
+            而若已知：width of containing block 如：830px
+            由于默认情况下margin-left，margin-right也为0
+            此时若margin-right = -10px
+            则有content-width(auto) = 840px
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warp">
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+            <div class="session"></div>
+        </div>
+    </div>
+</body>
+</html>

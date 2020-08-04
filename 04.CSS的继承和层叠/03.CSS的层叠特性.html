@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基本层叠，后面一定把前面的层叠
+        前提：使用了相同的选择器 */
+        .box1 {
+            color: red;
+        }
+        .box2 {
+            
+            background-color: #ff0000;
+            color: yellow;
+        }
+        .box3 {
+            width: 300px;
+        }
+        /* 给第三个div设置样式 */
+        /* 当选择器不同时，就不能按照基本层叠来理解了，需要知道选择器的权重 
+            id: 100
+            class: 10
+            元素： 1
+            blue
+        */
+        #main {
+            color: blue;
+        }
+        .class {
+            color: green;
+        }
+        div {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 box2 box3">hahahaha</div>
+
+    <div id="main" class="box">hehehehe</div>
+</body>
+</html>

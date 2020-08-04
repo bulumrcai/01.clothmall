@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+
+        .phone-app {
+            position: relative;
+            margin-left: 300px;
+            overflow: hidden
+        }
+        .phone-app>span {
+            line-height: 30px;
+        }
+        .phone-app .kaola-img .arrow {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -5px;
+            /* transform: translate(-50%);
+            margin-left: 50%;
+
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #eaeaea;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent; */
+
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+
+            border-top: 1px solid #eaeaea;
+            border-left: 1px solid #eaeaea; 
+            transform: rotate(45deg);
+/* 利用旋转，覆盖得到箭头，好处：有border 缺点：定位需要慢慢调整  */         
+            display: block;
+        }
+        .phone-app .kaola-img {
+            position: absolute;
+            border: 1px solid #eaeaea;
+            top: 30px;
+            left: 0;
+            transform: translate(-50%);
+            /* 
+            transform: translate(-50%);
+            left: 50%;
+            */
+            margin-left: 50%;
+            display: none;
+        }
+        .phone-app .kaola-img span {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            /* margin-bottom: 3px; */
+        }
+        
+        .phone-app span:hover+span {
+            display: inline;
+        }
+        /* hover选中显示的方法 
+           绝对定位会自动使其变为block
+        */
+    </style>
+</head>
+<body>
+    <a href="#" class="phone-app">
+        <span>手机考拉</span>
+        <!-- a元素放div不好 -->
+        <!-- <div class="arrow"></div> -->
+        <span class="kaola-img">
+            <span class="arrow"></span>
+            <img src="../img/kaola_app.png" alt="">
+            <span>下载app</span>
+            <span>领1000元新人礼包</span>
+        </span>
+    </a>
+</body>
+</html>

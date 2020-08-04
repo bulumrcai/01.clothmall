@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :not(div) {
+            color: red;
+        } */
+        /* 所有文字都会变成红色,因为body元素也不是div */
+        /* :not(html):not(body):not(div) {
+            color: red;
+        } */
+        body :not(div) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>文字内容1</div>
+    <p>文字内容2</p>
+    <span>文字内容3</span>
+    <div>文字内容4</div>
+</body>
+</html>

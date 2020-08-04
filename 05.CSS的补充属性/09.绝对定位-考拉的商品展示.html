@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0px auto;
+        }
+        
+        .prod-left {
+            display: inline-block;
+            position: relative;
+
+        }
+        .prod-left ul {
+            position: absolute;
+            bottom: 20px;
+            width: 285px;
+            /* background-color: #ff0000; */
+            /* 让其中的内容进行等分，对最后一栏无效 */
+            text-align: justify;
+            text-align-last: justify;
+            /* 居中显示 */
+            /* 没有设置left，right时，默认为auto */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .prod-left ul li {
+            margin-top: 20px;
+            display: inline-block;
+            border: 1px solid #eeeeee;
+            font-size: 12px;
+            border-radius: 40px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 1px rgba(0, 0 ,0, 0.1);
+            
+            /* 负责对外的分布 */
+        }
+        .prod-left ul li a{
+            display: inline-block;
+            /* 负责具体的样式 */
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            text-align-last: center;    
+        }
+        .prod-left ul li a:hover {
+            color: #ff1e32;
+        }
+    </style>
+</head>
+<body>
+   <div class="section wrap">
+        <div class="prod-left">
+            <a href="#">
+                <img src="../img/kaola_shoes_img.jpg" alt="">
+            </a>
+            <ul>
+                <li><a href="#">男运动鞋</a></li>
+                <li><a href="#">女运动鞋</a></li>
+                <li><a href="#">运动服饰</a></li>
+                <li><a href="#">速干T恤</a></li>
+                <li><a href="#">健身服饰</a></li>
+                <li><a href="#">户外背包</a></li>
+            </ul>
+        </div>
+   </div>
+</body>
+</html>

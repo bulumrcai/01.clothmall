@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* 边框的宽度，样式，颜色 */
+            border: 1px solid #000;
+            /* table与td,td与td的边框线重叠，变成了2px */
+            /* text-align: center;  内容居中，由于table的tr为块级元素，所以不能将其居中 */
+            /* table的居中属性 */
+            margin: 0 auto;
+        }
+        caption {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 20px;
+            text-align: center;
+            /* 将内容中的文字居中 */
+        }
+        .test table {
+            /* table与td,td与td的边框线重叠，变成了2px */
+            /* 将边框合并 */
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        /* h2 {
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <!-- table>(tr>td{单元格$}*5)*3 -->
+    <div>
+        <table cellspacing="0">
+            <caption>普通表格</caption>
+            <thead>
+                <tr>
+                    <th>单元格1</th>
+                    <th>单元格2</th>
+                    <th>单元格3</th>
+                    <th>单元格4</th>
+                    <th>单元格5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                    <td>单元格4</td>
+                    <td>单元格5</td>
+                </tr>
+                <tr>
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                    <td>单元格4</td>
+                    <td>单元格5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>页脚1</td>
+                    <td>页脚2</td>
+                    <td>页脚3</td>
+                    <td>页脚4</td>
+                    <td>页脚5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="test">
+        <!-- <h2>细线表格</h2> -->
+        <table>
+            <caption>细线表格</caption>
+            <thead>
+                <tr>
+                    <th>单元格1</th>
+                    <th>单元格2</th>
+                    <th>单元格3</th>
+                    <th>单元格4</th>
+                    <th>单元格5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                    <td>单元格4</td>
+                    <td>单元格5</td>
+                </tr>
+                <tr>
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                    <td>单元格4</td>
+                    <td>单元格5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>页脚1</td>
+                    <td>页脚2</td>
+                    <td>页脚3</td>
+                    <td>页脚4</td>
+                    <td>页脚5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

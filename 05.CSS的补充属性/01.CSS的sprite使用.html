@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset.css */
+        p, ul, h5 {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            /* margin: 0;
+            padding: 0; */
+        }
+        /* comment.css */
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+            /* 当需要居中的时候，将该类加入到里面去即可 */
+        }
+        /* 具体样式 */
+        .service li, .service h5, .service p {
+            display: inline-block; 
+            /* 基线对齐 */
+            /* float: left; */
+        }
+        .service ul li {
+            margin-left: 12px;
+            margin-right: 25px;
+            /* 左右margin不会折叠 */
+        }
+        .service ul li h5 {
+            width: 36px;
+            height: 42px;
+            /* 利用缩进使文字不显示 */
+            text-indent: -999px;
+            vertical-align: middle;
+            /* 并没有真正的居中 */
+
+            background-image: url("../img/jdg_footer.png");
+            background-repeat: no-repeat;
+            background-size: 113px 86.5px;
+        }
+        .service ul li p{
+            height: 42px;
+            line-height: 42px;
+            /* 文字居中显示，会继承给p */
+            font-size: 18px;
+            color: #444;
+            font-weight: 700;
+        }   
+        .service ul li .category {
+            background-position: 0px 0px;
+            
+        }
+        .service ul li .speed {
+            background-position: -38.5px 0;
+            
+        }
+        .service ul li .good {
+            background-position: -77px 0;
+            
+        }
+        .service ul li .little {
+            background-position: 0 -44.5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav wrap">
+        <div class="left">左边的内容</div>
+        <div class="right">右边的内容</div>
+    </div>
+    <div class="header wrap"></div>
+    <div class="footer wrap"></div>
+    <!-- 多快好省 -->
+    <div class="service wrap">
+        <ul>
+            <li>
+                <h5 class="category">多</h5>
+                <p>品类齐全，轻松购物</p>
+            </li>
+            <li>
+                <h5 class="speed">快</h5>
+                <p>多仓直发，极速配送</p>
+            </li>
+            <li>
+                <h5 class="good">好</h5>
+                <p>正品行货，精致服务</p>
+            </li>
+            <li>
+                <h5 class="little">省</h5>
+                <p>天天低价，畅选无忧</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

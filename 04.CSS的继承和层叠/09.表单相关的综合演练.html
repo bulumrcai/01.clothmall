@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css的reset */
+        body, ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        input {
+            outline: none;
+        }
+        textarea {
+            resize: none;
+        }
+        /* fieldset {
+            width: 400px;
+        } */
+        input:focus, textarea:focus {
+            border-color: blue;
+            border-style: solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 由于有文件的上传，所以必须改变enctype为mulpart/form-data,且method为POST -->
+    <form action="https://www/jfiejijfie.com" enctype="multipart/form-data" method="POST">
+        <fieldset>
+            <legend>必填元素</legend>
+            <!-- 手机输入框 -->
+            <!-- 最好不要用br而是用div进行包裹 -->
+            <div>
+                <label for="phone">手机</label>
+                <input type="text" 
+                       maxlength="13" 
+                       placeholder="请输入您的手机号码"
+                       autofocus
+                       id="phone"
+                       name="phone">
+            </div>
+            <!-- 密码输入框 -->
+            <div>
+                <label for="pwd">密码：</label>
+                <input type="password"
+                       placeholder="请输入密码"
+                       name="pwd"
+                       id="pwd">
+            </div>
+            <!-- input,img: 行内替换元素 代码被替换成别的形式进行展示-->
+            <div>
+                <label for="secure">验证码: </label>
+                <input type="text"
+                       placeholder="请输入验证码"
+                       name="secure"
+                       id="secure">
+                <!--实现方式1: <botton>获取验证码</botton> -->
+                <input type="button"  
+                       value="获取验证码"
+                       disabled
+                       >
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>选填信息</legend>
+            <div>
+                <label for="photo">照片: </label>
+                <input type="file" value="选择图片" id="photo" name="photo">
+            </div>
+            <div>
+                <span>性别: </span>
+                <!-- 用name一样实现单选框的互斥,在url中,name作为query的key, -->
+                <label for="male">男</label><input type="radio" name="sex" checked id="male">
+                <label for="female">女</label><input type="radio" name="sex" id="female">
+            </div>
+            <div>
+                <span>爱好: </span>
+                <!-- 用name一样实现单选框的互斥,在url中,name作为query的key, -->
+                <label for="sing">唱</span><input type="checkbox" name="hobbies" id="sing">
+                <label for="dance">跳</span><input type="checkbox" name="hobbies" id="dance">
+                <label for="rap">rap</span><input type="checkbox" name="hobbies" id="rap">
+                <label for="basketball">篮球</span><input type="checkbox" name="hobbies" id="basketball">
+                    <!-- 同一类的checkbox要用同一个name -->
+            </div>
+    
+            <div>
+                <label for="education">学历: </span>
+                <select name="education" id="education">
+                    <option value="primary-school">小学</option>
+                    <option value="junior-high-school">初中</option>
+                    <option value="high-school">高中</option>
+                    <option value="universty-school">大学</option>
+                    <!-- 内容是给用户看到的,提交给服务器的是value -->
+                </select>
+            </div>
+    
+            <div>
+                <label for="abtract">简介</span>
+                <textarea name="text" id="abtract" cols="30" rows="5"></textarea>
+            </div>
+        </fieldset>
+    
+        <!-- 重置 
+        前提: 
+            1. type必须是reset类型(value值可以不用写)
+            2. 所哟的内容必须在一个表单中
+        -->
+        <input type="reset">
+        <input type="submit">
+    </form>
+    
+</body>
+</html>

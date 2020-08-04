@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: #ff0000;
+            width: 200px;
+            height: 200px;
+            /* 此时图片会溢出 */
+            /* overflow */
+            /* overflow 超出的部分依然可见 visible 默认值 */
+            /* overflow: visible; */
+            /* hidden 隐藏起来   */
+            /* overflow: hidden; */
+            /* 超出部分会隐藏，但可以根据滚动查看 */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../img/entity.JPG" alt="">
+    </div>
+    <!-- div的宽度为占据整行（块级元素），height为内容即图片的宽度 -->
+</body>
+</html>

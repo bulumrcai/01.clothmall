@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* content可以为空,但是不能删除 */
+        span::before {
+            content: "111";
+            /* color: red; */
+            background-color: #ff0000;
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+        }
+        span::after {
+            /* content: '...'; */
+            content: url("../img/entity.jpg");
+        }
+    </style>
+</head>
+<body>
+    <span>我是span元素</span>
+</body>
+</html>

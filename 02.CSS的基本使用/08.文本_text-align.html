@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test1 {
+            background-color: #00ff00;
+            text-align: center;
+        }
+        .test2 {
+            background-color: #ff0000;
+            text-align: center;
+        }
+        .test3 {
+            background-color: #ff0000;
+            text-align: center;
+        }
+        .inner {
+            background-color: #0000ff;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>text-align: center的使用</h2>
+    <div class="test1">哈哈哈哈</div> 
+    <div class="test2">
+        <img src="../img/entity.JPG" alt="">
+    </div> 
+    <div class="test3">
+        <div class="inner">我是div元素</div>
+        <!-- 实际上是inner继承了test3的text-align: center导致文字居中于inner
+        而inner并没有居中于test3 -->
+        <!-- 原因：div是一个块级元素，独占一行,width并不代表它的width就是那么大，还是独占一行 -->
+        <!-- 解决方法1:转化为非块级的元素 -->
+    </div>  
+    <!-- <div class="test2">哈哈哈哈</div>    
+    <div class="test3">哈哈哈哈</div>    
+    <div class="test4">哈哈哈哈</div>     -->
+</body>
+</html>

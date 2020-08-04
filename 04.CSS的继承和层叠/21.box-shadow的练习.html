@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .box {
+            width: 200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            /* 在设置宽度的情况下居中
+                没有设置则占整行
+             */
+             /* 方法1 */
+             /* 逗号可以添加另一个阴影 */
+             /* box-shadow: -5px 5px 10px,
+                         5px 0px 10px; */
+            /* 方法2 */
+            box-shadow: 0px 5px 10px;
+            /* 左右有个阴影：blur会向往扩散 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

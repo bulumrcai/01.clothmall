@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>普通按钮</h2>
+        <!-- input实现按钮 -->
+        <input type="button" value="按钮">
+        <!-- button实现按钮 -->
+        <button>按钮</button>
+    </div>
+   
+    <div>
+        <h2>重置按钮</h2>
+        <form action="">
+            <input type="text">
+            <!-- input实现按钮 -->
+            <input type="reset">
+            <!-- button实现按钮 -->
+            <button type="reset">重置</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>表单提交</h2>
+        <!-- 协议头加上主机地址 -->
+        <form action="https://www.baidu.com/s">
+            <!-- input实现按钮 要想提交,必须要有一个name即key-->
+            <input type="text" name="wd">
+            <input type="submit">
+            <!-- button实现按钮 -->
+            <button type="submit">提交</button>
+            <!-- button中的type的默认值是submit -->
+            <!-- 提交过后会自动重置 -->
+        </form>
+    </div>
+
+    <div>
+        <h2>模拟百度</h2>
+        <form action="https://www.baidu.com/s">
+            <input type="text" name="wd" placeholder="请输入搜索的关键字">
+            <input type="submit" value="百度一下">
+        </form>
+    </div>
+
+</body>
+</html>

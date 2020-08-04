@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1100px;
+            height: 180px;
+            background-color: #ff0000;
+            margin: 0 auto
+        }
+        .warp {
+            /* margin-right: -10px; */
+            margin-right: -5px;
+            /* 第一步：解决增加的border，使得容器可以容纳*/
+            /* 第三步：再次调节容器的大小，边框重叠后，由于5个都有1px不计算在内*/
+        }
+        .item {
+            /* width: 220px; */
+            /* 最后多出了1px的边框 */
+            width: 219px;
+            height: 176px;
+            float: left;
+            background-color: #00ff00;
+            border: 1px solid #ffffff;
+            /* 由于border占据了1px，所以全部的items占据的像素比原来增加了10px 
+            利用方法1，即可已解决位置不够放下一个的问题*/
+            margin-right: -1px;
+            /* 第二步：解决重叠的边框 */
+        }
+        span {
+            background-color: #ff0000;
+            float: left;
+            margin-right: -10px;
+        }
+        strong {
+            background-color: #00ff00;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warp">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>  
+    </div>
+    <h2>原理</h2>
+    <span>我是span</span>
+    <strong>我是strong</strong>
+</body>
+</html>

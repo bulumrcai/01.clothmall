@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            overflow: hidden;
+            /* 应该放在containing block（包含别人的块）中 */
+            /* 将中间的人定位到正中央 */
+           /* ( img-width - div-width ) / 2 */
+            margin: 0 auto;
+        }
+        img {
+            position: relative;
+            right: 450px;
+            margin-left: 50%;
+            /* left: 50% */
+            /* 先右移img-width的一半，再向右移宽度的一半 */
+            /* 要注意百分比相对的对象 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../img/long_picture.jpg" alt="" width="900px">
+    </div>
+    
+</body>
+</html>

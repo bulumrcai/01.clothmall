@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+        /* 具体样式 */
+        .right-side {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            border: 1px solid #eeaaee;
+        }
+        .right-side a {
+            display: block;
+            font-size: 12px;
+            text-align: center;
+            width: 62px;
+            height: 48px;
+            padding-top: 12px;
+            border-bottom: 1px solid #eeaaaa;
+            
+        }
+        .right-side a.top {
+            border-bottom: none;
+        }
+
+        .right-side a i {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 20px;
+
+            /* 若想要用背景图片，必须先设置宽高 */
+        }
+    </style>
+</head>
+<body>
+    <div class="right-side">
+        <a href="#">
+            <i></i>
+            <!-- 不放div，因为a中不要嵌套block元素 -->
+            <span>签到</span>
+        </a>
+        <a href="#">
+            <i></i>
+             <!-- 不放div，因为a中不要嵌套block元素 -->
+            <span>购物车</span>
+        </a>
+        <a href="#">
+            <i></i>
+                <!-- 不放div，因为a中不要嵌套block元素 -->
+            <span>APP</span>
+        </a>
+        <a href="#" class="top">
+            <i></i>
+                <!-- 不放div，因为a中不要嵌套block元素 -->
+            <span>TOP</span>
+        </a>
+    </div>
+</body>
+</html>

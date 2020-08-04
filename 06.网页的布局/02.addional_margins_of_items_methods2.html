@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 830px;
+            height: 620px;
+            background-color: #ff0000;
+            margin: 0 auto;
+        }
+        .session {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #00ff00;
+        }
+        .container .session:nth-child(4n) {
+            margin-right: 0;
+        }
+        /* 四个元素时，中间只有三个间隔，会导致最后一个元素的margin-right是多余的 */
+        /* 如何找到最后的margin，然后将其去掉
+        1. 使用伪类选择器(:nth child)
+           *兼容性的问题
+           *每一次都要修改
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+        <div class="session"></div>
+    </div>
+</body>
+</html>

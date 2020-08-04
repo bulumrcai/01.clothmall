@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 普通文本 */
+            text-align: center;
+        }
+        .box1 {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 行内元素 */
+            text-align: center;
+        }
+        .box2 {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 行内替换元素 */
+            text-align: center;
+        }
+
+        .special {
+            display: inline-block;
+        }
+        .box3 {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 行内块级元素(inline-block) */
+            text-align: center;
+        }
+        .box4 {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 行内块级元素(inline-block) */
+            /* 在没设置宽度时，宽度就是一行，唯一的作用是块元素会继承该属性，会发现居中，但实际上是因为块的继承而得到的居中，而不是块元素的居中*/
+            text-align: center;
+        }
+        .box5 {
+            height: 200px;
+            background-color: #ff0000;
+
+            /* 行内块级元素(inline-block) */
+        }
+        .inner {
+            width: 100px;
+            background-color: #0000ff;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>普通文本的居中</h2>
+   <div class="box">
+       <!-- 1. 普通文本  -->
+       我是div元素
+   </div> 
+
+   <h2>行内元素的居中</h2>
+   <div class="box1">
+       <!-- 2. 行内元素 -->
+       <strong>我是strong元素</strong>
+   </div>
+
+   <h2>行内替换元素的居中</h2>
+   <div class="box2">
+       <!-- 3. 行内替换元素 -->
+       <img src="../img/entity.JPG" alt="" height="100px">
+   </div>
+
+   <h2>行内块级元素的居中(inline-block)</h2>
+   <div class="box3">
+       <!-- 4 行内块级元素 -->
+       <strong class="special">我是strong元素</strong>
+   </div>
+
+   <h2>块级元素的居中(用text-align理解)</h2>
+   <div class="box4">
+       <!-- 5 块级元素 text-align -->
+       <div>hahahaha</div>
+        <!-- 设置了宽高之后，布局会依然认为其占据整行，所以设置宽高之后就不能居中了 -->
+   </div>
+   <h2>块级元素的居中</h2>
+   <div class="box5">
+       <!-- 6 块级元素 margin: 0 auto 块元素要设置宽度，不设置宽度，则占一行，本来就是居中的 -->
+       <div class="inner">hahahaha</div>
+   </div>
+</body>
+</html>

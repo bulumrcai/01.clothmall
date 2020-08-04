@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container1 {
+            background-color: #ff0000;
+        }
+
+        .container1::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .inner1 {
+            background-color: #00ff00;
+            width: 500px;
+            height: 200px;
+            float: right;
+        }
+
+
+        .container {
+            background-color: #ff0000;
+            position: relative;
+        }
+        /* .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        /* clear:both 只是清除浮动 */
+        .inner {
+            background-color: #00ff00;
+            width: 500px;
+            height: 200px;
+            position: absolute;
+        }
+
+        
+    </style>
+</head>
+<body>
+   
+    <!-- 实现绝对定位还能撑开父元素，只能通过JavaScript实现：
+        获取到绝对定位的子元素的高度，再设置给父元素。 -->
+    <h2>float所造成的高度坍塌</h2>
+    <div class="container1">
+        <div class="inner1"></div>
+    </div>
+
+    <h2>position: absolute造成的高度坍塌</h2>
+    <div class="container">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

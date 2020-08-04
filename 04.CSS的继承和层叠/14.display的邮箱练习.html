@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 样式重置 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        /* 整体样式 */
+        .email {
+            width: 120px;
+            border: 1px solid #999999;
+            text-align: center;
+        }
+        /* 局部样式 */
+        .email:hover .list {
+            display: block;
+        }
+        .header {
+            background-color: #999999;
+        }
+
+        /* .header:hover+ul {
+            display: block;
+        }
+        当悬停在header的时候显示list，但有一个问题是离开header的时候无法显示，所以得设置成整体作为hover而不是局部 */
+        .email .list {
+            display: none;
+        }
+
+
+
+        .email .list li:hover {
+            background-color: skyblue;
+        }
+        /* 边缘部分是个箭头而不是小手，原因：a元素是一个行内元素，只包裹住子集 */
+        .email .list li a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. 设置结构
+        2. 样式重置
+        3. 整体样式
+        4. 局部样式
+     -->
+    <!-- <div class="email">
+        <div class="header">邮箱</div>
+        <ul class="list">
+            <a href="#">
+                <li>QQ邮箱</li>
+            </a>
+            <a href="#">
+                <li>163邮箱</li>
+            </a>
+            <a href="#">
+                <li>126邮箱</li>
+            </a>    
+        </ul>
+    </div> 
+    这种写法不符合一般的格式
+    -->
+    <div class="email">
+        <div class="header">邮箱</div>
+        <ul class="list">
+            <li><a href="#">QQ邮箱</a></li>
+            <li><a href="#">163邮箱</a></li>
+            <li><a href="#">126邮箱</a></li>
+        </ul>
+    </div>
+</body>
+</html>

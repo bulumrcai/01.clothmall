@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 去除内外边距 */
+article, aside, blockquote, body, button, code, dd, details, 
+div, dl, dt, fieldset, figcaption, figure, footer, form, h1, 
+h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, 
+nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*去除列表的list-style,比如前面的一些空格 */
+ul, ol, li {
+    list-style: none;
+}
+/* 去除a元素的下划线,以及颜色 */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* i元素经常用作图标 */
+i em{
+    font-style: normal;
+}
+/* 当tab选中时,会有一个outline或者边框 */
+input, textarea, button, select, a {
+    outline: none;
+    border: none;
+}
+/* 表格合并边框(折叠),将单元格之间的距离改为0 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* img默认是没有border,早期浏览器有border
+使得img不是基线对齐而造成下面有空隙*/
+img {
+    border: none;
+    vertical-align: middle;
+}
